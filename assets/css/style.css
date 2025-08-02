@@ -170,6 +170,7 @@ a:hover,
 a:active,
 a:visited {
     text-decoration: none;
+    color: #729638;
 }
 
 .txt-lg {
@@ -181,7 +182,15 @@ a:visited {
 }
 
 .txt-sm {
+    font-size: 14px;
+}
+
+.txt-tn {
     font-size: 12px;
+}
+
+.txt-bold {
+    font-weight: bold;
 }
 
 
@@ -263,37 +272,119 @@ header ul li.active {
     }
 }
 
+.break-line {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.menuWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 0 40px;
+    border-bottom: 1px solid #333333;
+    z-index: 9999;
+}
+
+.menuTabs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menuTabs .tab {
+    padding: 16px 10px 14px;
+    cursor: pointer;
+}
+
+.menuTabs .tab.active {
+    border-bottom: 2px solid #333333;
+}
+
+.containerWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - 32px);
+    padding: 57px 0 40px;
+}
+
+.tabContainer {
+    width: 80%;
+    max-width: 1200px;
+    padding-top: 40px;
+}
+
+.tabContainer .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tabContainer .img {
+    text-align: center;
+    padding: 10px 0 0;
+}
+
+.tabContainer img {
+    width: 100%;
+    max-width: 800px;
+}
+
+.tabContainer a img {
+    width: 20px;
+    vertical-align: sub;
+    margin-left: 6px;
+}
+
+.cs-logo {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.cs-logo img {
+    width: 80%;
+    max-width: 180px;
+}
+
+.timelineItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.timelineImg {
+    width: 100px;
+}
+
+.tabContainer .googlemap {
+    width: 100%;
+    aspect-ratio: 7 / 3;
+    background-color: #f7f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabContainer p.txt-lg {
+    line-height: 1.25em;
+}
+
+.tabContainer img.icon {
+    width: 30px;
+    vertical-align: bottom;
+    margin-right: 6px;
+    margin-top: 10px;
+}
+
 /* Footer */
 
 footer {
     text-align: center;
     background-color: #eeeeee;
     padding: 4px;
-}
-
-.wrapper {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 50px 0 40px;
-}
-
-.container {
-    width: 65%;
-    max-width: 1200px;
-}
-
-.index-logo {
-    text-align: center;
-    margin-top: 60px;
-}
-
-.index-logo img {
-    width: 80%;
-    max-width: 600px;
-}
-
-.index-intro {
-    text-align: center;
-    padding-top: 48px;
 }

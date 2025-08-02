@@ -33,27 +33,38 @@
 </head>
 
 <body>
-    <header>
-        <ul class="txt-sm">
-            <li class="active">邀請</li>
-            <li>衣著</li>
-            <li>禮金</li>
-            <li>交通</li>
-        </ul>
-    </header>
-    <div class="wrapper">
-        <div class="container">
-            <div class="index-logo"><img src="./assets/images/logo.png" alt=""></div>
-            <div class="index-intro">
-                <p class="txt-md">
-                    XXXXXXXXX<br />XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-                </p>
+    <div id="app" v-cloak>
+        <div ref="infoTab" class="wow animate__fadeInUp" data-wow-duration="1s">
+            <div class="menuWrapper">
+                <div class="menuTabs txt-sm">
+                    <div v-for="(item, idx) in info.tabs" class="tab"
+                        :class="['tab'+(idx+1), info.tabStatus === idx ? 'active':'']"
+                        @click="handleInfoTabChangeTab('info',idx)" :id="'tab-info-' + (idx+1)">
+                        {{item.title}}
+                    </div>
+                </div>
+            </div>
+            <div class="containerWrapper">
+                <div class="tabContainer">
+                    <transition-group name="tab-fade" tag="div" mode="in-out">
+                        <div v-for="(item, idx) in info.tabs" v-bind:key="idx" v-if="info.tabStatus === idx"
+                            class="tab-content" :class="['tab-content'+(idx+1), info.tabStatus === idx ? 'active':'']">
+                            <div v-if="item.notice" v-html="item.notice" class="content txt-md" />
+                        </div>
+                    </transition-group>
+                </div>
             </div>
         </div>
+        <footer>
+            <p class="txt-tn">Chengshih & Szyi's Wedding Ceremony 2025</p>
+        </footer>
     </div>
-    <footer>
-        <p class="txt-sm">Chengshih & Szyi's Wedding Ceremony 2025</p>
-    </footer>
+
 </body>
+
+
+<script src="./assets/js/wow.min.js"></script>
+<script src="./assets/js/vue.min.js"></script>
+<script src="./assets/js/vue_main.js"></script>
 
 </html>
