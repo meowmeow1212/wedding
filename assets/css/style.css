@@ -279,6 +279,11 @@ header ul li.active {
     margin-bottom: 10px;
 }
 
+.tab-content4 .break-line {
+    padding-top: 0px;
+    margin-bottom: 0px;
+}
+
 .menuWrapper {
     position: fixed;
     top: 0;
@@ -326,7 +331,7 @@ header ul li.active {
 
 .tabContainer .img {
     text-align: center;
-    padding: 10px 0 0;
+    padding: 10px 0 20px;
 }
 
 .tabContainer img {
@@ -342,7 +347,7 @@ header ul li.active {
 
 .cs-logo {
     text-align: center;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 .cs-logo img {
@@ -350,15 +355,28 @@ header ul li.active {
     max-width: 180px;
 }
 
+.timelineWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
 .timelineItem {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .timelineImg {
     width: 100px;
+}
+
+.timelineDescription {
+    width: 100%;
+    text-align: center;
 }
 
 .tabContainer .googlemap {
@@ -368,6 +386,10 @@ header ul li.active {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.tabContainer .tab-content4 .googlemap {
+    margin-top: 20px;
 }
 
 .tabContainer p.txt-lg {
